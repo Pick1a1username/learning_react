@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-import MenuButton from "./MenuButton.js"
+import MenuButton from "./MenuButton.js";
+import Menu from "./Menu.js";
 
 class MenuContainer extends Component {
     constructor(props) {
@@ -30,6 +31,7 @@ class MenuContainer extends Component {
         return (
             <div>
                 <MenuButton handleMouseDown={this.handleMouseDown}/>
+                <Menu handleMouseDown={this.handleMouseDown} menuVisibility={this.state.visible} />
                 <div>
                     <p>Can you spot the item that doesn't belong?</p>
                     <ul>
